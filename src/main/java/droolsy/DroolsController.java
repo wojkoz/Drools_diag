@@ -12,10 +12,10 @@ public class DroolsController {
     private KieSession session;
 
     @PostMapping("/diag")
-    public Results orderNow(@RequestBody BloodSample order) {
+    public Results checkSample(@RequestBody BloodSample sample) {
         Results result = new Results();
         session.setGlobal("gResult", result);
-        session.insert(order);
+        session.insert(sample);
         session.fireAllRules();
         return result;
     }
