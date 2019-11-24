@@ -7,15 +7,17 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-public class MegaOfferController {
+public class DroolsController {
     @Autowired
     private KieSession session;
 
-    @PostMapping("/order")
-    public Order orderNow(@RequestBody Order order) {
+    @PostMapping("/diag")
+    public Results orderNow(@RequestBody BloodSample order) {
+        Results result = new Results();
+        session.setGlobal("gResult", result);
         session.insert(order);
-        session.fireAllRules(2);
-        return order;
+        session.fireAllRules();
+        return result;
     }
 
 }

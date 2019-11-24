@@ -15,13 +15,13 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
 @Configuration
-public class DroolConfig {
+public class DroolsEngine {
 
     private KieServices kieServices = KieServices.Factory.get();
 
     private KieFileSystem getKieFileSystem() throws IOException {
         KieFileSystem kieFileSystem = kieServices.newKieFileSystem();
-        kieFileSystem.write(ResourceFactory.newClassPathResource("offer.drl"));
+        kieFileSystem.write(ResourceFactory.newClassPathResource("diag_rules.drl"));
         return kieFileSystem;
     }
 

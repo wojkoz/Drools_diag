@@ -1,0 +1,73 @@
+package KieRule;
+import droolsy.BloodSample;
+global droolsy.Results gResult;
+
+rule "OB_K"
+    when
+    BloodSample(predkoscOpadaniaLeukocytow >=12 && plec == 'K' );
+    then
+    gResult.addDisease("OB");
+end;
+
+rule "OB_M"
+    when
+    BloodSample(predkoscOpadaniaLeukocytow >=8 && plec == 'M' );
+    then
+    gResult.addDisease("OB");
+end;
+
+rule "HCT_K"
+    when
+    BloodSample((procentHermatokrytu < 37 || procentHermatokrytu > 47) && plec == 'K');
+    then
+    gResult.addDisease("HCT");
+end;
+
+rule "HCT_M"
+    when
+    BloodSample((procentHermatokrytu < 42 && procentHermatokrytu > 52) && plec == 'M');
+    then
+    gResult.addDisease("HCT");
+end;
+
+rule "HGB_K"
+    when
+    BloodSample((stezenieHemoglobiny < 11.5 || stezenieHemoglobiny > 16) && plec == "K");
+    then
+    gResult.addDisease("HGB");
+end;
+
+rule "HGB_M"
+    when
+    BloodSample((stezenieHemoglobiny < 12.5 || stezenieHemoglobiny > 18) && plec == "M");
+    then
+    gResult.addDisease("HGB");
+end;
+
+rule "WBC_KM"
+    when
+    BloodSample(liczbaBialychKrwinek < 4000 || liczbaBialychKrwinek > 10000);
+    then
+    gResult.addDisease("WBC");
+end;
+
+rule "RBC_K"
+    when
+    BloodSample((liczbaCzerwonychKrwinek < 42000 || liczbaCzerwonychKrwinek > 54000) && plec == "K");
+    then
+    gResult.addDisease("RBC");
+end;
+
+rule "RBC_M"
+    when
+    BloodSample((liczbaCzerwonychKrwinek < 47000 || liczbaCzerwonychKrwinek > 61000) && plec == "M");
+    then
+    gResult.addDisease("RBC");
+end;
+
+rule "PLT"
+    when
+    BloodSample((liczbaPlytekKrwi < 13000 || liczbaPlytekKrwi > 450000));
+    then
+    gResult.addDisease("PLT");
+end;
