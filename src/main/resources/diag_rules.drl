@@ -6,68 +6,224 @@ rule "OB_K"
     when
     BloodSample(predkoscOpadaniaLeukocytow >=12 && plec == 'K' );
     then
-    gResult.addDisease("OB");
+    gResult.addTest("OB");
 end;
 
 rule "OB_M"
     when
     BloodSample(predkoscOpadaniaLeukocytow >=8 && plec == 'M' );
     then
-    gResult.addDisease("OB");
+    gResult.addTest("OB");
 end;
 
 rule "HCT_K"
     when
     BloodSample((procentHermatokrytu < 37 || procentHermatokrytu > 47) && plec == 'K');
     then
-    gResult.addDisease("HCT");
+    gResult.addTest("HCT");
 end;
 
 rule "HCT_M"
     when
     BloodSample((procentHermatokrytu < 42 && procentHermatokrytu > 52) && plec == 'M');
     then
-    gResult.addDisease("HCT");
+    gResult.addTest("HCT");
 end;
 
 rule "HGB_K"
     when
     BloodSample((stezenieHemoglobiny < 11.5 || stezenieHemoglobiny > 16) && plec == "K");
     then
-    gResult.addDisease("HGB");
+    gResult.addTest("HGB");
 end;
 
 rule "HGB_M"
     when
     BloodSample((stezenieHemoglobiny < 12.5 || stezenieHemoglobiny > 18) && plec == "M");
     then
-    gResult.addDisease("HGB");
+    gResult.addTest("HGB");
 end;
 
 rule "WBC_KM"
     when
     BloodSample(liczbaBialychKrwinek < 4000 || liczbaBialychKrwinek > 10000);
     then
-    gResult.addDisease("WBC");
+    gResult.addTest("WBC");
 end;
 
 rule "RBC_K"
     when
     BloodSample((liczbaCzerwonychKrwinek < 42000 || liczbaCzerwonychKrwinek > 54000) && plec == "K");
     then
-    gResult.addDisease("RBC");
+    gResult.addTest("RBC");
 end;
 
 rule "RBC_M"
     when
     BloodSample((liczbaCzerwonychKrwinek < 47000 || liczbaCzerwonychKrwinek > 61000) && plec == "M");
     then
-    gResult.addDisease("RBC");
+    gResult.addTest("RBC");
 end;
 
 rule "PLT"
     when
     BloodSample((liczbaPlytekKrwi < 13000 || liczbaPlytekKrwi > 450000));
     then
-    gResult.addDisease("PLT");
+    gResult.addTest("PLT");
 end;
+
+rule "HCV"
+    when
+    BloodSample((alt > 33 && ast > 32 && ggtp > 40));
+    then
+    gResult.addTest("HCV");
+end;
+
+rule "HCV_M"
+    when
+    BloodSample((zelazo < 60 && kwasFoliowy < 1.8 && witaminaB12 < 200) && plec == "M");
+    then
+    gResult.addDisease("HCV - wirusowe zapalenie wątroby typu C");
+end;
+
+rule "HCV_K"
+    when
+    BloodSample((zelazo < 40 && kwasFoliowy < 1.8 && witaminaB12 < 200) && plec == "K");
+    then
+    gResult.addDisease("HCV - wirusowe zapalenie wątroby typu C");
+end;
+
+rule "Anemia"
+    when
+    BloodSample((zelazo < 60 && kwasFoliowy < 1.8 && witaminaB12 < 200) && plec == "M");
+    then
+    gResult.addDisease("Anemia");
+end;
+
+rule "niedoczynnosc_tarczycy"
+    when
+    BloodSample((tsh > 5.0));
+    then
+    gResult.addDisease("Niedoczynnosc tarczycy");
+end;
+
+rule "nadczynnosc_tarczycy"
+    when
+    BloodSample((tsh > 0.32));
+    then
+    gResult.addDisease("Nadczynnosc tarczycy");
+end;
+
+rule "zaburzenia_funkcji_filtracji_nerek"
+    when
+    BloodSample((cystatynaC > 1.03));
+    then
+    gResult.addDisease("Zaburzenia funkcji filtracyjnych nerek");
+end;
+
+rule "hiperglikemia"
+    when
+    BloodSample((glukoza > 99 +25) );
+    then
+    gResult.addDisease("Hiperglikemia");
+end;
+
+rule "hipoglikemia"
+    when
+    BloodSample((glukoza < 60));
+    then
+    gResult.addDisease("Hipoglikemia");
+end;
+
+rule "miazdzyca_M"
+    when
+    BloodSample((tc > 190 && ldl > 115 && hdl < 40) && plec == "M");
+    then
+    gResult.addDisease("Miazdzyca");
+end;
+
+rule "miazdzyca_K"
+    when
+    BloodSample((tc > 190 && ldl > 115 && hdl < 45) && plec == "K");
+    then
+    gResult.addDisease("Miazdzyca");
+end;
+
+rule "bialaczka_M"
+    when
+    BloodSample((wbc > 10.8 && rbc < 4.5 && plt < 140) && plec == "M");
+    then
+    gResult.addDisease("Bialaczka");
+end;
+
+rule "bialaczka_K"
+    when
+    BloodSample((wbc > 10.8 && rbc < 3.9 && plt < 140) && plec == "K");
+    then
+    gResult.addDisease("Bialaczka");
+end;
+
+rule "hemofilia"
+    when
+    BloodSample((inr > 1.2) );
+    then
+    gResult.addDisease("Hemofilia");
+end;
+
+rule "poliglobulina_M"
+    when
+    BloodSample((rbc > 6.5) && plec == "M");
+    then
+    gResult.addDisease("Poliglobulina");
+end;
+
+rule "poliglobulina_K"
+    when
+    BloodSample((rbc > 5.6) && plec == "K");
+    then
+    gResult.addDisease("Poliglobulina");
+end;
+
+rule "leukopenia"
+    when
+    BloodSample((wbc < 4.8));
+    then
+    gResult.addDisease("Leukopenia");
+end;
+
+rule "leukocytoza"
+    when
+    BloodSample((wbc > 10.8));
+    then
+    gResult.addDisease("Leukocytoza");
+end;
+
+rule "przewlekle_choroby_pluc_lub_nerek_M"
+    when
+    BloodSample((hct > 51) && plec == "M");
+    then
+    gResult.addDisease("Przewlekle choroby pluc lub nerek");
+end;
+
+rule "przewlekle_choroby_pluc_lub_nerek_K"
+    when
+    BloodSample((hct > 47) && plec == "K");
+    then
+    gResult.addDisease("Przewlekle choroby pluc lub nerek");
+end;
+
+rule "osteoporoza"
+    when
+    BloodSample(((wapn > 10.4 || wapn < 7.6) && (fosfor > 4.5|| fosfor < 3.0) && (witaminaD > 50 || witaminaD < 30)));
+    then
+    gResult.addDisease("Osteoporoza");
+end;
+
+rule "zaburzenia_funkcji_trzustki"
+    when
+    BloodSample((( lipaza < 150) && (amylaza < 25 || amylaza > 125 )));
+    then
+    gResult.addDisease("Zaburzenia funkcji trzustki");
+end;
+
+
