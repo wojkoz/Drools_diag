@@ -109,7 +109,7 @@ end;
 
 rule "nadczynnosc_tarczycy"
     when
-    BloodSample((tsh > 0.32));
+    BloodSample((tsh < 0.32));
     then
     gResult.addDisease("Nadczynnosc tarczycy");
 end;

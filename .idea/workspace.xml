@@ -1,12 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ArtifactsWorkspaceSettings">
+    <artifacts-to-build>
+      <artifact name="test_drools:jar" />
+    </artifacts-to-build>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="84ee19b7-f151-4ab5-919b-07f725ce5512" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/droolsy/BloodSample.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/droolsy/BloodSample.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/droolsy/DroolsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/droolsy/DroolsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/droolsy/Results.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/droolsy/Results.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/diag_rules.drl" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/diag_rules.drl" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,10 +47,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1573590392541" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
+    <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -122,7 +125,12 @@
       <workItem from="1574869647196" duration="991000" />
       <workItem from="1575311560233" duration="115000" />
       <workItem from="1575311796646" duration="85000" />
-      <workItem from="1576007425316" duration="5024000" />
+      <workItem from="1576007425316" duration="5100000" />
+      <workItem from="1576078314958" duration="1212000" />
+      <workItem from="1576521369089" duration="92000" />
+      <workItem from="1578436262909" duration="210000" />
+      <workItem from="1578437529521" duration="478000" />
+      <workItem from="1578498056607" duration="853000" />
     </task>
     <task id="LOCAL-00001" summary="init">
       <created>1574612840600</created>
@@ -138,7 +146,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574612975900</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="more rules">
+      <created>1576015841285</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1576015841285</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -163,121 +178,69 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init" />
     <MESSAGE value="checkSample method" />
-    <option name="LAST_COMMIT_MESSAGE" value="checkSample method" />
+    <MESSAGE value="more rules" />
+    <option name="LAST_COMMIT_MESSAGE" value="more rules" />
   </component>
   <component name="WindowStateProjectService">
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser" timestamp="1576012051699">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="765" y="203" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1576012051699" />
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom" timestamp="1576014115588">
+    <state x="1023" y="375" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1578436367998">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1576014115588" />
-    <state width="1877" height="348" key="GridCell.Tab.0.center" timestamp="1576014115588">
+    <state x="1023" y="375" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1578436367998" />
+    <state x="585" y="114" key="CommitChangelistDialog2" timestamp="1576015839714">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1576014115588" />
-    <state width="1877" height="348" key="GridCell.Tab.0.left" timestamp="1576014115588">
+    <state x="585" y="114" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1576015839714" />
+    <state x="739" y="274" key="FileChooserDialogImpl" timestamp="1578437534993">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1576014115588" />
-    <state width="1877" height="348" key="GridCell.Tab.0.right" timestamp="1576014115588">
+    <state x="739" y="274" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1578437534993" />
+    <state width="1877" height="208" key="GridCell.Tab.0.bottom" timestamp="1578498910613">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576014115588" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1576014115589">
+    <state width="1877" height="208" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1578498910613" />
+    <state width="1877" height="208" key="GridCell.Tab.0.center" timestamp="1578498910613">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1576014115589" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1576014115588">
+    <state width="1877" height="208" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1578498910613" />
+    <state width="1877" height="208" key="GridCell.Tab.0.left" timestamp="1578498910613">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1576014115588" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1576014115588">
+    <state width="1877" height="208" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1578498910613" />
+    <state width="1877" height="208" key="GridCell.Tab.0.right" timestamp="1578498910613">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1576014115588" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1576014115589">
+    <state width="1877" height="208" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1578498910613" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1576015900152">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576014115589" />
-  </component>
-  <component name="masterDetails">
-    <states>
-      <state key="ArtifactsStructureConfigurable.UI">
-        <settings>
-          <artifact-editor />
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="FacetStructureConfigurable.UI">
-        <settings>
-          <last-edited>No facets are configured</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="GlobalLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>javafx.web</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="JdkListConfigurable.UI">
-        <settings>
-          <last-edited>11</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ModuleStructureConfigurable.UI">
-        <settings>
-          <last-edited>Droolsy</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-                <option value="0.6" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-      <state key="ProjectLibrariesConfigurable.UI">
-        <settings>
-          <last-edited>Maven: ch.qos.logback:logback-classic:1.2.3</last-edited>
-          <splitter-proportions>
-            <option name="proportions">
-              <list>
-                <option value="0.2" />
-              </list>
-            </option>
-          </splitter-proportions>
-        </settings>
-      </state>
-    </states>
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1576015900152" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1576015900151">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1576015900151" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1576015900151">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1576015900151" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1576015900152">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1576015900152" />
+    <state x="773" y="166" key="SettingsEditor" timestamp="1578436389484">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="773" y="166" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1578436389484" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1576015848040">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1576015848040" />
+    <state x="342" y="140" key="new project wizard" timestamp="1576521455321">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="342" y="140" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1576521455321" />
   </component>
 </project>
